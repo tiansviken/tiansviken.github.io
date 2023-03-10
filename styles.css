@@ -1,0 +1,271 @@
+
+html,
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low:
+    1px 1px 1.6px hsl(var(--shadow-color) / 0.34),
+    1.7px 1.7px 2.7px -1.2px hsl(var(--shadow-color) / 0.34),
+    4px 4px 6.4px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium:
+    1px 1px 1.6px hsl(var(--shadow-color) / 0.36),
+    3.3px 3.3px 5.3px -0.8px hsl(var(--shadow-color) / 0.36),
+    8.2px 8.2px 13px -1.7px hsl(var(--shadow-color) / 0.36),
+    20px 20px 31.8px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high:
+    1px 1px 1.6px hsl(var(--shadow-color) / 0.34),
+    5.8px 5.8px 9.2px -0.4px hsl(var(--shadow-color) / 0.34),
+    10.9px 10.9px 17.3px -0.7px hsl(var(--shadow-color) / 0.34),
+    17.9px 17.9px 28.5px -1.1px hsl(var(--shadow-color) / 0.34),
+    28.6px 28.6px 45.5px -1.4px hsl(var(--shadow-color) / 0.34),
+    44.7px 44.7px 71.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    67.9px 67.9px 108px -2.1px hsl(var(--shadow-color) / 0.34),
+    100px 100px 159.1px -2.5px hsl(var(--shadow-color) / 0.34);
+}
+
+/* -------------------------general------------------------- */
+body {
+  font-family: "Inter Tight", sans-serif;
+
+  margin: 0;
+  color: #fff;
+
+  overflow-x: hidden;
+  
+  background-color: #080808;
+  background-image: url(images/noise.png);
+  background-size: auto, cover;
+  background-attachment: fixed;
+}
+
+.sectionContent {
+  width: 60%;
+  margin: auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#quote {
+  font-family: "DM Serif Display";
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  
+  text-shadow: 2px 2px 2px #1515206b;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0.3rem 0.3rem 0.3rem #00000060;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  
+  text-shadow: 0.2rem 0.2rem 0.2rem #00000060;
+}
+
+a {
+  color: #aaa;
+  text-decoration: none;
+  transition: 250ms ease;
+}
+a:hover {
+  text-shadow: 0 0 0.2rem #ffffff7a;
+  color: #ddd;
+  transition: 250ms ease;
+    
+}
+
+.hyperlink {
+  font-weight: 600;
+  color: #ddd;
+
+  background-image: url(images/noise.png);
+  background-color: transparent;
+  backdrop-filter: blur(10px) contrast(90%);
+
+  border: 1px solid #fff1;
+  border-radius: 10px;
+  
+  padding: 10px;
+  margin-right: 0.5rem;
+}
+hr {
+  margin: 0;
+  width: 100%;
+  border: 2px solid #eee;
+  border-radius: 2px;
+}
+
+/* -------------------------header------------------------- */
+header {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  
+  border-bottom: 1px solid #fff1;
+  background-image: url(images/noise.png);
+  backdrop-filter: blur(10px) contrast(90%);
+}
+
+nav ul {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  list-style: none;
+}
+
+#logo {
+  width: 3rem;
+}
+
+
+/* -------------------------intro------------------------- */
+.intro {
+  height: 60vh;
+}
+
+.greeting {
+  margin-top: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.portrett {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+}
+
+#informatium {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+/* -----animation----- */
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  user-select: none;
+  z-index: -1;
+  position: absolute;
+  top: -120%;
+  left: -100%;
+  animation: rotate 120s linear infinite;
+}
+
+
+/* -------------------------about-------------------------- */
+.aboutSection {
+  width: 100%;
+
+  background-image: linear-gradient(
+    135deg,
+    hsl(350deg 60% 42%) 0%,
+    hsl(352deg 80% 26%) 50%,
+    hsl(354deg 100% 9%) 100%
+  );
+}
+
+
+/* -------------------------projects------------------------- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cardContainer {
+  flex-grow: 1;
+  width: 25rem;
+  border: 1px solid #fff1;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  margin: 1rem;
+
+  box-shadow: var(--shadow-elevation-medium);
+}
+.cardContainer h3 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.cardImage {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-radius: 10px;
+  border-bottom: 1px solid #fff1;
+  max-width: 100%;
+}
+
+
+/* ------------------------contact------------------------- */
+
+
+
+
+
+
+
+/* ------------------------footer------------------------- */
+
+
+
+/* ------------------------mediaQueries------------------------- */
+@media (max-width: 850px) {
+  .sectionContent {
+    width: 90% !important;
+    transition: 250ms ease;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
