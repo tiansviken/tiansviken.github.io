@@ -48,10 +48,6 @@ body {
   padding-bottom: 3rem;
 }
 
-#quote {
-  font-family: "DM Serif Display";
-  font-size: 4rem;
-}
 
 p {
   font-size: 1.6rem;
@@ -83,7 +79,7 @@ a:hover {
   text-shadow: 0 0 0.2rem #ffffff7a;
   color: #ddd;
   transition: 250ms ease;
-    
+  
 }
 
 .hyperlink {
@@ -93,13 +89,23 @@ a:hover {
   background-image: url(images/noise.png);
   background-color: transparent;
   backdrop-filter: blur(10px) contrast(90%);
-
+  
   border: 1px solid #fff1;
   border-radius: 10px;
   
   padding: 10px;
   margin-right: 0.5rem;
 }
+
+cite {
+  line-height: 2.5rem;
+  font-size: 2rem;
+}
+#quote {
+  font-family: "DM Serif Display";
+  font-size: 3rem;
+}
+
 hr {
   margin: 0;
   width: 100%;
