@@ -89,7 +89,7 @@ a:hover {
   background-image: url(images/noise.png);
   background-color: transparent;
   backdrop-filter: blur(10px) contrast(90%);
-  
+
   border: 1px solid #fff1;
   border-radius: 10px;
   
@@ -203,6 +203,7 @@ height: 60vh;
     hsl(352deg 80% 26%) 50%,
     hsl(354deg 100% 9%) 100%
   );
+  box-shadow: var(--shadow-elevation-medium);
 }
 
 
@@ -215,11 +216,13 @@ height: 60vh;
 .cardContainer {
   flex-grow: 1;
   width: 25rem;
+  background-image: url(images/noise.png);
+  background-color: transparent;
+  backdrop-filter: blur(10px) contrast(90%);
+
   border: 1px solid #fff1;
   border-radius: 10px;
-  backdrop-filter: blur(10px);
   margin: 1rem;
-
   box-shadow: var(--shadow-elevation-medium);
 }
 .cardContainer h3 {
@@ -227,10 +230,10 @@ height: 60vh;
   margin-left: 1rem;
 }
 .cardImage {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
   border-radius: 10px;
   border-bottom: 1px solid #fff1;
+
+
   max-width: 100%;
 }
 
@@ -244,7 +247,10 @@ height: 60vh;
 
 
 /* ------------------------footer------------------------- */
-
+footer {
+  color: #777;
+  font-weight: 700;
+}
 
 
 /* ------------------------mediaQueries------------------------- */
