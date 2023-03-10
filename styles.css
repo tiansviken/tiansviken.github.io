@@ -35,7 +35,7 @@ body {
 
   overflow-x: hidden;
   
-  background-color: #080808;
+  background-color: #111;
   background-image: url(images/noise.png);
   background-size: auto, cover;
   background-attachment: fixed;
@@ -110,6 +110,7 @@ hr {
 /* -------------------------header------------------------- */
 header {
   font-weight: 600;
+  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   
@@ -117,7 +118,14 @@ header {
   background-image: url(images/noise.png);
   backdrop-filter: blur(10px) contrast(90%);
 }
+header div {
+  margin-left: 1rem;
+}
 
+.logo {
+  width: 3rem;
+  margin-top: 0.4rem;
+}
 nav ul {
   margin: 1rem;
   display: flex;
@@ -129,14 +137,11 @@ nav ul li {
   list-style: none;
 }
 
-#logo {
-  width: 3rem;
-}
-
 
 /* -------------------------intro------------------------- */
-.intro {
-  height: 60vh;
+.introSection {
+height: 60vh;
+
 }
 
 .greeting {
@@ -160,6 +165,12 @@ nav ul li {
 }
 
 /* -----animation----- */
+.arrow {
+  width: 4rem;
+  position: absolute;
+  transform: translate(50vw);
+}
+
 @keyframes rotate {
   to {
     transform: rotate(360deg);
@@ -169,8 +180,9 @@ nav ul li {
   user-select: none;
   z-index: -1;
   position: absolute;
-  top: -120%;
-  left: -100%;
+  top: -120vh;
+  left: -110vw;
+  
   animation: rotate 120s linear infinite;
 }
 
@@ -194,7 +206,6 @@ nav ul li {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .cardContainer {
   flex-grow: 1;
   width: 25rem;
@@ -209,7 +220,6 @@ nav ul li {
   margin-top: 1rem;
   margin-left: 1rem;
 }
-
 .cardImage {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -238,7 +248,11 @@ nav ul li {
     transition: 250ms ease;
   }
 }
-
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none;
+  }
+}
 
 
 
