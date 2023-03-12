@@ -5,6 +5,9 @@ html,
 }
 
 :root {
+  --clippingAngleWide: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+  --clippingAngleNarrow: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+
   --shadow-color: 0deg 0% 0%;
   --shadow-elevation-low:
     1px 1px 1.6px hsl(var(--shadow-color) / 0.34),
@@ -53,7 +56,7 @@ p {
   font-size: 1.6rem;
   font-weight: 400;
   
-  text-shadow: 2px 2px 2px #1515206b;
+  text-shadow: 1px 1px 5px #1515206b;
 }
 
 h1 {
@@ -61,13 +64,13 @@ h1 {
   font-family: "DM Serif Display", serif;
   font-weight: bold;
   margin: 0;
-  text-shadow: 0.3rem 0.3rem 0.3rem #00000060;
+  text-shadow: 5px 5px 5px #00000060;
 }
 h2 {
   font-size: 2rem;
   font-weight: 600;
   
-  text-shadow: 0.2rem 0.2rem 0.2rem #00000060;
+  text-shadow: 3px 3px 5px #00000060;
 }
 
 a {
@@ -116,7 +119,7 @@ hr {
 /* -------------------------header------------------------- */
 header {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
   
@@ -196,6 +199,10 @@ height: 60vh;
 /* -------------------------about-------------------------- */
 .aboutSection {
   width: 100%;
+  margin-top: -5rem;
+  padding-top: 10rem;
+  clip-path: var(--clippingAngleWide);
+
 
   background-image: linear-gradient(
     135deg,
@@ -239,17 +246,28 @@ height: 60vh;
 
 
 /* ------------------------contact------------------------- */
+.contactSection {
+  background-color: #ddd;
+  color: #111;
+  margin-top: -3rem;
+  padding-top: 7rem;
+  clip-path: var(--clippingAngleWide);
+}
 
-
-
+.contactSection a {
+  color: #111;
+  border: 1px solid #0000007a;
+}
 
 
 
 
 /* ------------------------footer------------------------- */
 footer {
-  color: #777;
+  color: #ddd;
+  background-color: #111;
   font-weight: 700;
+  padding: 1rem;
 }
 
 
@@ -258,6 +276,13 @@ footer {
   .sectionContent {
     width: 90% !important;
     transition: 250ms ease;
+  }
+  .aboutSection {
+    clip-path: var(--clippingAngleNarrow);
+  }
+  .contactSection {
+    clip-path: var(--clippingAngleNarrow);  
+    margin-top: 1rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
